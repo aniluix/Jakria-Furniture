@@ -196,6 +196,51 @@ const [active, setActive] = useState(0);
   },
 ];
 
+const galleryData = [
+  {
+    id: 1,
+    title: "Luxury Sofa",
+    category: "living",
+    image: "/Images/gallery1.avif",
+  },
+  {
+    id: 2,
+    title: "Wooden Dining Table",
+    category: "dining",
+    image: "/Images/gallery2.avif",
+  },
+  {
+    id: 3,
+    title: "Modern Bed",
+    category: "bedroom",
+    image: "/Images/gallery3.avif",
+  },
+  {
+    id: 4,
+    title: "Office Desk",
+    category: "office",
+    image: "/Images/gallery4.avif",
+  },
+  {
+    id: 5,
+    title: "Luxury Chair",
+    category: "living",
+    image: "/Images/gallery5.avif",
+  },
+  {
+    id: 6,
+    title: "Outdoor Furniture",
+    category: "outdoor",
+    image: "/Images/gallery6.avif",
+  },
+];
+
+const [activeCategory, setActiveCategory] = useState("all");
+const filteredGallery =
+  activeCategory === "all"
+    ? galleryData
+    : galleryData.filter((item) => item.category === activeCategory);
+
   return (
     <>
       <Link
@@ -505,8 +550,6 @@ const [active, setActive] = useState(0);
         </Container>
       </section>
 
-      
-
       <section className="HomeDecorSec">
         <Container fluid className="container-xl">
           <div className="HomeDecureData">
@@ -537,6 +580,65 @@ const [active, setActive] = useState(0);
             </div>
 
           </div>
+        </Container>
+      </section>
+
+      <section className="GallerySec">
+        <Container fluid className="container-xl">
+
+          <div className="GalleryData">
+
+            <div className="GalleryHeading">
+              <span>Our Collection</span>
+              <h2>Discover Beautiful Furniture</h2>
+              <p> Explore our premium collection of handcrafted furniture designed
+                for comfort, elegance, and modern living.</p>
+            </div>
+
+            <div className="GalleryFilter">
+
+              <button className={activeCategory === "all" ? "active" : ""} onClick={() => setActiveCategory("all")}>
+                All
+              </button>
+
+              <button className={activeCategory === "living" ? "active" : ""} onClick={() => setActiveCategory("living")} >
+                Living Room
+              </button>
+
+              <button className={activeCategory === "bedroom" ? "active" : ""} onClick={() => setActiveCategory("bedroom")} >
+                Bedroom
+              </button>
+
+              <button className={activeCategory === "dining" ? "active" : ""} onClick={() => setActiveCategory("dining")}>
+                Dining
+              </button>
+
+              <button className={activeCategory === "office" ? "active" : ""} onClick={() => setActiveCategory("office")}>
+                Office
+              </button>
+
+              <button className={activeCategory === "outdoor" ? "active" : ""} onClick={() => setActiveCategory("outdoor")} >
+                Outdoor
+              </button>
+
+            </div>
+
+            <div className="GalleryCardDiv">
+              {filteredGallery.map((item) => (
+                <div className="ss" key={item.id}>
+                  <div className="GalleryItem">
+                    <Image src={item.image} alt={item.title} width={380} height={475} priority />
+                    <div className="GalleryOverlay">
+                      <h4>{item.title}</h4>
+                      <span>{item.category}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+
         </Container>
       </section>
 
