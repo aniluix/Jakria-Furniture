@@ -1,0 +1,1316 @@
+/* HeroSection Started  */
+
+.HeroSection .HeroCarouselDiv .carousel-inner .Slider1 img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+.HeroSection .HeroCarouselDiv .carousel-inner .carousel-item .Slider1{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.651));
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+.HeroSection .HeroCarouselDiv .carousel-inner .carousel-item .Slider1 .CarouselFirstText{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+    z-index: 1;
+}
+.HeroSection .HeroCarouselDiv .carousel-inner .carousel-item .Slider1 .CarouselFirstText .sliderhead{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.HeroSection .HeroCarouselDiv .carousel-inner .carousel-item .Slider1 .CarouselFirstText  .sliderhead span{
+    font-size: 12px;
+    color: #dd7210;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.HeroSection .HeroCarouselDiv .carousel-inner .carousel-item .Slider1 .CarouselFirstText .sliderhead h2{
+    font-size: 60px;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-family: var(--serif);
+}
+.HeroSection .HeroCarouselDiv .carousel-inner .carousel-item .Slider1 .CarouselFirstText p{
+    max-width: 780px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+.HeroSection .HeroCarouselDiv .carousel-inner .carousel-item .Slider1 .CarouselFirstText .HeroBtn{
+    position: relative;
+}
+.HeroSection .HeroCarouselDiv .carousel-inner .carousel-item .Slider1 .CarouselFirstText .HeroBtn a{
+    background: var(--SpanPrimaryColor);
+    color: var(--text-primary);
+    padding: 10px 15px 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--SpanPrimaryColor);
+    gap: 25px;
+    transition: background 0.3s ease-in-out , color 0.3s ease-in-out;
+    &:hover{
+        background: var(--text-primary);
+        color: var(--black);
+    }
+    &:hover span{
+        background: var(--SpanPrimaryColor);
+        color: var(--text-primary);
+    }
+}
+.HeroSection .HeroCarouselDiv .carousel-inner .carousel-item .Slider1 .CarouselFirstText .HeroBtn a span{
+    color: var(--black);
+    background: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.HeroSection .carousel-control-prev , .HeroSection .carousel-control-next , .HeroSection .carousel-indicators{
+    display: none;
+}
+
+/* HeroSection Ended */
+
+/* ExploreKeySec started  */
+
+.ExploreKeySec{
+    background-color: #000000 !important;
+    background: url(/Images/bg-pattern-teapoy.png) no-repeat !important;
+    background-position: bottom center !important;
+    background-size: cover !important;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        background: #000000cf;
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+.ExploreKeySec .ExploreItems{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+}
+.ExploreKeySec .ExploreItems .ExploreTrack {
+    display: inline-flex;
+    align-items: center;
+    gap: 40px;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+.ExploreKeySec .ExploreItems .ExploreTrack:hover {
+    animation-play-state: paused;
+}
+.ExploreKeySec .ExploreItems .ExploreTrack a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 38px;
+    flex-shrink: 0;
+    &:hover{
+        color: var(--SpanPrimaryColor);
+    }
+}
+.ExploreKeySec .ExploreItems .ExploreTrack svg {
+    font-size: 38px;
+    color: var(--SpanPrimaryColor);
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ExploreKeySec Ended  */
+
+/* OurStorySec Started  */
+
+.OurStorySec {
+    min-height: 100vh;
+    background-color: #161616;
+    display: flex;
+    align-items: center;
+}
+
+.OurStorySec .StoryData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+}
+
+.OurStorySec .StoryData .LeftStoryDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.OurStorySec .StoryData .LeftStoryDiv .StoryHead {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.OurStorySec .StoryData .LeftStoryDiv .StoryHead span {
+    color: var(--SpanPrimaryColor);
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.OurStorySec .StoryData .LeftStoryDiv .StoryHead h2 {
+    color: var(--text-primary);
+    font-size: clamp(32px, 4vw, 42px);
+    letter-spacing: .1em;
+    font-weight: 700;
+    line-height: 1.15;
+    font-family: var(--serif) !important;
+}
+
+.OurStorySec .StoryData .LeftStoryDiv .StoryHead h2 em {
+    color: var(--SpanPrimaryColor);
+    font-style: italic;
+    font-family: var(--serif) !important;
+}
+
+.OurStorySec .StoryData .LeftStoryDiv p {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.OurStorySec .StoryData .LeftStoryDiv p span {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.OurStorySec .StoryData .LeftStoryDiv .StoryCardDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px 25px;
+}
+
+.OurStorySec .StoryData .LeftStoryDiv .StoryCardDiv .stat-card {
+    padding: 24px;
+    border: 1px solid #252830;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 4px;
+        background: var(--SpanPrimaryColor);
+    }
+}
+
+.OurStorySec .StoryData .LeftStoryDiv .StoryCardDiv .stat-card h3 {
+    color: var(--SpanPrimaryColor);
+    font-weight: 700;
+    letter-spacing: .1em;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.OurStorySec .StoryData .LeftStoryDiv .StoryCardDiv .stat-card p {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.OurStorySec .StoryData .RytStoryDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.OurStorySec .StoryData .RytStoryDiv .story-big {
+    position: relative;
+}
+
+.OurStorySec .StoryData .RytStoryDiv .story-big h4 {
+    font-family: var(--impact);
+    font-size: clamp(80px, 12vw, 180px);
+    -webkit-text-stroke: 1px rgba(200, 146, 42, .2);
+    color: transparent;
+    line-height: 1;
+    position: absolute;
+    top: -40px;
+    right: -20px;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.OurStorySec .StoryData .RytStoryDiv .StoryListDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 30px;
+}
+
+.OurStorySec .StoryData .RytStoryDiv .StoryListDiv ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.OurStorySec .StoryData .RytStoryDiv .StoryListDiv ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #252830;
+    color: var(--text-secondary);
+    padding-bottom: 14px;
+}
+
+/* .OurStorySec .StoryData .RytStoryDiv .StoryListDiv ul li:last-child{
+    border: none;
+} */
+.OurStorySec .StoryData .RytStoryDiv .StoryListDiv ul li svg {
+    font-size: 10px;
+    color: var(--SpanPrimaryColor);
+}
+
+.OurStorySec .StoryData .RytStoryDiv .StoryContactDiv {
+    padding: 32px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    position: relative;
+    z-index: 1;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.OurStorySec .StoryData .RytStoryDiv .StoryContactDiv span {
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.OurStorySec .StoryData .RytStoryDiv .StoryContactDiv .Cntlnk {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.OurStorySec .StoryData .RytStoryDiv .StoryContactDiv .Cntlnk a {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    transition: color .3s;
+
+    &:hover {
+        color: var(--gold);
+    }
+}
+
+.OurStorySec .StoryData .RytStoryDiv .StoryContactDiv .Cntlnk p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.OurStorySec .StoryData .RytStoryDiv .StoryContactDiv .cntme span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+.OurStorySec .StoryData .RytStoryDiv .StoryContactDiv .cntme h6 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 8px 16px;
+    background: rgba(200, 146, 42, .1);
+    border: 1px solid rgba(200, 146, 42, .3);
+    font-size: 12px;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: .06em;
+}
+
+/* OurStorySec Ended */
+
+/* Why Choose Started  */
+
+.WhyChooseSec {
+    /* background-color: #101010 !important; */
+    background: url(/Images/body-bg.webp) !important;
+    background-color: #101010 !important;
+    position: relative;
+    overflow: hidden;
+    padding: 150px 0px;
+}
+.WhyChooseSec .section-inner{
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+.WhyChooseSec .section-inner .why-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    gap: 20px;
+}
+.WhyChooseSec .section-inner .why-header .lftwhyhead{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.WhyChooseSec .section-inner .why-header .lftwhyhead .section-eyebrow{
+    display: flex;
+    align-items: end;
+    color: var(--SpanPrimaryColor);
+}
+.WhyChooseSec .section-inner .why-header .lftwhyhead h2{
+    color: var(--text-primary);
+    font-size: 42px;
+    text-transform: capitalize;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.WhyChooseSec .section-inner .why-header p{
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: end;
+    line-height: 24px;
+}
+.WhyChooseSec .section-inner .WhyFeatureData{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+.WhyChooseSec .section-inner .WhyFeatureData .why-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px
+}
+.WhyChooseSec .section-inner .WhyFeatureData .why-features .why-feature {
+    padding: 36px 32px;
+    background: #1B1B1B;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease-in-out;
+    &:hover{
+        background: rgba(200, 146, 42, .05)
+    }
+}
+.WhyChooseSec .section-inner .WhyFeatureData .why-features .why-feature .why-feature-num {
+    font-family: var(--impact);
+    font-size: 56px;
+    -webkit-text-stroke: 1px var(--text-primary);
+    color: transparent;
+    line-height: 1;
+    margin-bottom: 20px;
+    transition: color .3s, -webkit-text-stroke .3s
+}
+.WhyChooseSec .section-inner .WhyFeatureData .why-features .why-feature:hover .why-feature-num {
+    -webkit-text-stroke-color: rgba(200, 146, 42, .5)
+}
+.WhyChooseSec .section-inner .WhyFeatureData .why-features .why-feature  .why-feature-line {
+    width: 32px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 20px;
+    transition: width .3s
+}
+.WhyChooseSec .section-inner .WhyFeatureData .why-features .why-feature:hover .why-feature-line {
+    width: 56px
+}
+
+.WhyChooseSec .section-inner .WhyFeatureData .why-features .why-feature .why-feature-title {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-primary)
+}
+
+.WhyChooseSec .section-inner .WhyFeatureData .why-features .why-feature .why-feature-body {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.8;
+    font-weight: 300
+}
+
+.WhyChooseSec .section-inner .WhyFeatureData .why-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--SpanPrimaryColor);
+    padding: 28px 32px;
+    border: 1px solid rgba(200, 146, 42, .2);
+    border-radius: 0px 0px 24px 24px;
+}
+.WhyChooseSec .section-inner .WhyFeatureData .why-bottom .whtfttexted{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.WhyChooseSec .section-inner .WhyFeatureData .why-bottom .whtfttexted h4 {
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic
+}
+.WhyChooseSec .section-inner .WhyFeatureData .why-bottom .whtfttexted p {
+    font-size: 16px;
+    color: var(--text-primary);
+    margin-top: 4px
+}
+.WhyChooseSec .section-inner .WhyFeatureData .why-bottom a {
+    font-size: 16px;
+    color: var(--text-primary);
+    background: var(--black);
+    padding: 16px 30px;
+    font-size: 16px;
+    border-radius: 50px 0px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Why Choose Ended */
+
+
+
+/* SocialSec Started  */
+
+.SocialSec{
+    padding: 100px 0px;
+    background: url(/Images/socialbg.jpg)no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        opacity: 0.6;
+    }
+}
+.SocialSec .SocialLinkData{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+}
+.SocialSec .SocialLinkData .top{
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-gap: 80px;
+}
+.SocialSec .SocialLinkData .top .left{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.SocialSec .SocialLinkData .top .left h2{
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--white);
+}
+.SocialSec .SocialLinkData .top .left p{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}   
+.SocialSec .SocialLinkData .top .left a{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    background: #c89b5e;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 24px;
+    padding: 8px 20px;
+}   
+.SocialSec .SocialLinkData .top .Right{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}   
+.SocialSec .SocialLinkData .top .Right a{
+    display: flex;
+    align-items: center;
+    padding: 5px 25px;
+    background: #5e5e5e;
+    border-radius: 2.5em;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+    transition: background 0.3s ease-in-out;
+    &:hover{
+        background: #c89b5e;
+    }
+}   
+.SocialSec .SocialLinkData .Bottom{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px
+}   
+.SocialSec .SocialLinkData .Bottom a{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}   
+.SocialSec .SocialLinkData .Bottom a .SoclImg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: scale 0.3s ease-in-out ;
+}   
+.SocialSec .SocialLinkData .Bottom a .SoclImg img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out ;
+}   
+.SocialSec .SocialLinkData .Bottom a:hover .SoclImg img{
+    transform: scale(1.1);
+}   
+.SocialSec .SocialLinkData .Bottom a .SoclImg .IconDiv{
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.55);
+    /* filter: blur(5px); */
+    transition: all 0.3s ease-in-out; 
+}   
+.SocialSec .SocialLinkData .Bottom a:hover .SoclImg .IconDiv{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    top: 0;
+    right: 0;
+}
+.SocialSec .SocialLinkData .Bottom a .SoclImg .IconDiv svg{
+    color: var(--white);
+}   
+.SocialSec .SocialLinkData .Bottom a:hover .SoclImg .IconDiv svg{
+    font-size: 60px;
+}
+.SocialSec .SocialLinkData .Bottom a h6{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.SocialSec .SocialLinkData .Bottom a:hover h6{
+    color: #c89b5e;
+}
+
+
+
+/* SocialSec Ended */
+
+/* NextGenSection Started  */
+
+.NextGenSection{
+    background: url(/Images/counter-bg-h2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* min-height: 100vh; */
+    padding: 100px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 80px;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #000000;
+        opacity: 0.6;
+        width: 100%;
+        height: 100%;
+    }
+}
+.NextGenSection .NextGenData{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.NextGenSection .NextGenData .videoBtn {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.NextGenSection .NextGenData .circleText {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 8s linear infinite;
+}
+
+.NextGenSection .NextGenData .circleText text {
+  fill: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.NextGenSection .NextGenData .playIcon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: var(--SpanPrimaryColor);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-size: 22px;
+  transition: .3s;
+}
+
+.NextGenSection .NextGenData .videoBtn:hover .circleText {
+  animation-play-state: paused;
+}
+
+.NextGenSection .NextGenData .videoBtn:hover .playIcon {
+  transform: scale(1.08);
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.NextGenSection .NextGenData h2{
+    font-size: 60px;
+    color: var(--text-primary);
+    font-family: var(--serif);
+}
+.NextGenSection .NextGenData p{
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+}
+.NextGenSection .GenrationCount{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+    z-index: 1;
+    min-height: 185px;
+    border-top: 1px solid #5e5e5e;
+}
+.NextGenSection .GenrationCount .GenCountItem{
+    border-right: 1px solid #5e5e5e;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+.NextGenSection .GenrationCount .GenCountItem h4{
+    font-size: 60px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.NextGenSection .GenrationCount .GenCountItem p{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* NextGenSection Ended */
+
+
+/* TeamsSec Started  */
+
+.TeamsSec{
+    padding: 100px 0px;
+    background: url(/Images/body-bg.webp) !important;
+    background-color: #101010 !important;
+}
+.TeamsSec .TeamsData {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.TeamsSec .TeamsData .TeamHead{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+}
+.TeamsSec .TeamsData .TeamHead span{
+    text-transform: uppercase;
+    font-variant: all-small-caps;
+    font-weight: 600;
+    color: #dd7210;
+    font-size: 16px;
+}
+.TeamsSec .TeamsData .TeamHead h2{
+    font-size: 60px;
+    font-weight: 500;
+    font-family: var(--serif);
+    color: var(--text-primary);
+}
+.TeamsSec .TeamsData .TeamsCardDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.TeamsSec .TeamsData .TeamsCardDiv .TeamItemDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    text-align: center;
+}
+.TeamsSec .TeamsData .TeamsCardDiv .TeamItemDiv .TeamImage{
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out , opacity 0.3s ease-in-out;
+    border-radius: 12px;
+    &:hover img{
+        transform: scale(1.1);
+    }
+    &:hover .TeamSocial{
+        opacity: 1;
+    }
+}
+.TeamsSec .TeamsData .TeamsCardDiv .TeamItemDiv .TeamImage img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 12px;
+}
+.TeamsSec .TeamsData .TeamsCardDiv .TeamItemDiv .TeamImage .TeamSocial{
+    position: absolute;
+    z-index: 1;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.TeamsSec .TeamsData .TeamsCardDiv .TeamItemDiv .TeamImage .TeamSocial a{
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--text-primary);
+    color: var(--black);
+    border-radius: 50px;
+    transition: color 0.3s ease-in-out , background 0.3s ease-in-out;
+    &:hover{
+        background: var(--SpanPrimaryColor);
+        color: var(--text-primary);
+    }
+}
+.TeamsSec .TeamsData .TeamsCardDiv .TeamItemDiv .TeamImage .TeamSocial a svg{
+    font-size: 18px;
+}
+.TeamsSec .TeamsData .TeamsCardDiv .TeamItemDiv .TeamInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+}
+.TeamsSec .TeamsData .TeamsCardDiv .TeamItemDiv .TeamInfo h4{
+    color: var(--white);
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 600;
+}
+.TeamsSec .TeamsData .TeamsCardDiv .TeamItemDiv .TeamInfo p{
+    color: var(--text-secondary);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.1;
+}
+
+
+/* TeamsSec Ended */
+
+
+
+
+
+
+
+
+
+
+
+/* UnlockSec Started  */
+
+.UnlockSec{
+    padding: 100px 0px;
+    background: url(/Images/body-bg.webp) !important;
+    background-color: #1E1D1C !important;
+}
+.UnlockSec .UnLockData{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.UnlockSec .UnLockData .TopUnlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.UnlockSec .UnLockData .TopUnlock .left{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.UnlockSec .UnLockData .TopUnlock .left span{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #dd7210;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.UnlockSec .UnLockData .TopUnlock .left h2{
+    font-size: 60px;
+    font-weight: 400;
+    color: var(--white);
+    font-family: var(--serif);
+}
+.UnlockSec .UnLockData .BottomUnlock{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.UnlockSec .UnLockData .BottomUnlock .ImageDiv {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    &:hover img{
+        transform: scale(1.1);
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+        border-radius: 12px;
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+.UnlockSec .UnLockData .BottomUnlock .ImageDiv img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.UnlockSec .UnLockData .BottomUnlock .ImageDiv .ImageTexed{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.UnlockSec .UnLockData .BottomUnlock .ImageDiv .ImageTexed h4{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white);
+}
+.UnlockSec .UnLockData .BottomUnlock .ImageDiv .ImageTexed p{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    
+}
+.UnlockSec .UnLockData .BottomUnlock .RytBtm{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+}
+.UnlockSec .UnLockData .BottomUnlock .RytBtm .SubBtm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+
+/* UnlockSec Ended */
+
+/* Customized Furniture Started  */
+
+.CustomizedSec{
+    padding: 100px 0px;
+    background: url(/Images/body-bg.webp) !important;
+    background-color: #343333 !important;
+}
+.CustomizedSec .CustomizedData{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.CustomizedSec .CustomizedData .CustomTop{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+.CustomizedSec .CustomizedData .CustomTop span{
+    font-size: 18px;
+    color: var(--SpanPrimaryColor);
+    font-weight: 600;
+}
+.CustomizedSec .CustomizedData .CustomTop h2{
+    font-size: 60px;
+    color: var(--text-primary);
+    font-family: var(--serif);
+}
+.CustomizedSec .CustomizedData .CustomBottom{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 50px;
+}
+.CustomizedSec .CustomizedData .CustomBottom .LeftCustom{
+    border-radius: 16px;
+    width: 100%;
+    height: 480px;
+    border: 1px solid var(--border);
+}
+.CustomizedSec .CustomizedData .CustomBottom .LeftCustom img{
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.CustomizedSec .CustomizedData .CustomBottom .RightCustom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}
+.CustomizedSec .CustomizedData .CustomBottom .RightCustom button{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5e5e5e;
+    border-radius: 12px;
+    background: transparent;
+    min-height: 137px;
+    width: 246px;
+    &:hover{
+        border: 1px solid var(--SpanPrimaryColor);
+        background: var(--SpanPrimaryColor);
+    }
+    &:active{
+        border: 1px solid var(--SpanPrimaryColor);
+        background: var(--SpanPrimaryColor);
+    }
+}
+
+
+/* Customized Furniture Ended  */
+
+
+/* HomeDecorSec Started  */
+.HomeDecorSec{
+    padding: 100px 0px;
+    background: url(/Images/body-bg.webp) !important;
+    background-color: #101010 !important;
+}
+.HomeDecorSec .HomeDecureData{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore){
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore) .DecureImg {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore) .DecureImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore):hover .DecureImg img {
+   transform: scale(1.1);
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore) .DecureText{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore) .DecureText span{
+    text-transform: uppercase;
+    color: var(--SpanPrimaryColor);
+    font-size: 14px;
+    font-weight: 600;
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore) .DecureText h2{
+    color: var(--text-primary);
+    font-size: 42px;
+    font-family: var(--serif);
+    font-weight: 600;
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore) .DecureText p{
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore) .DecureText h4{
+    color: var(--text-primary);
+    font-size: 32px;
+    font-weight: 600;
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore) .DecureText ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore) .DecureText ul li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-secondary);
+    font-size: 18px;
+    font-weight: 600;
+}
+.HomeDecorSec .HomeDecureData :is(.LeftDecore , .RightDecore) .DecureText ul li svg{
+    color: var(--SpanPrimaryColor);
+}
+
+/* HomeDecorSec Ended */
+
+
+/* ClientSec Started  */
+
+.ClientSec{
+    padding: 100px 0px;
+    background: url(/Images/body-bg.webp) !important;
+    background-color: #101010 !important;
+}
+.ClientSec .ClientData{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+.ClientSec .ClientData .LeftClientItems{
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+.ClientSec .ClientData .LeftClientItems span{
+    color: var(--SpanPrimaryColor);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.ClientSec .ClientData .LeftClientItems span svg{
+    font-size: 22px;
+    color: var(--SpanPrimaryColor);
+}
+.ClientSec .ClientData .LeftClientItems .hdjd span{
+    font-size: 55px;
+    color: var(--text-primary);
+    font-family: var(--serif);
+}
+.ClientSec .ClientData .LeftClientItems .hdjd h2{
+    font-family: var(--impact);
+    font-size: 180px;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    color: transparent;
+    pointer-events: none;
+    user-select: none;
+    line-height: 1.2;
+    display: block;
+    letter-spacing: .04em;
+}
+.ClientSec .ClientData .LeftClientItems .hdjd h6{
+    color: var(--SpanPrimaryColor);
+    font-style: italic;
+    font-family: var(--serif) !important;
+    text-transform: capitalize;
+    line-height: 1;
+    font-size: 90px;
+}
+.ClientSec .ClientData .LeftClientItems p{
+    color: var(--text-secondary);
+}
+
+.ClientSec .ClientData .RightClientItems img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.ClientSec .ClientData .LeftClientItems .ClientBtn{
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+.ClientSec .ClientData .LeftClientItems .ClientBtn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background: var(--SpanPrimaryColor);
+    padding: 10px 20px;
+    color: var(--text-primary);
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    border: 1px solid var(--SpanPrimaryColor);
+    transition: all .3s;
+    &:hover{
+        background: transparent;
+        transform: translateY(-2px);
+
+    }
+}
+
+.ClientSec .ClientData .LeftClientItems .ClientBtn a:last-child{
+    background: transparent !important;
+    &:hover{
+        background: var(--SpanPrimaryColor) !important;
+    }
+}
+
+/* ClientSec Ended */
