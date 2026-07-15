@@ -25,6 +25,7 @@ import Image from "next/image";
 import { FaXTwitter } from "react-icons/fa6";
 
 function HomePage() {
+
   const stats = [
     {
       number: 500,
@@ -53,8 +54,8 @@ function HomePage() {
   const teamData = [
     {
       id: 1,
-      image: "/Images/team1.jpg",
-      name: "Charles Carter",
+      image: "/Images/team1.JPEG",
+      name: "Balwinder",
       role: "CEO",
       social: [
         { id: 1, icon: <FaFacebookF />, link: "#" },
@@ -65,8 +66,8 @@ function HomePage() {
     },
     {
       id: 2,
-      image: "/Images/team1.jpg",
-      name: "John Smith",
+      image: "/Images/designer.png",
+      name: "Anil Kumar",
       role: "Designer",
       social: [
         { id: 1, icon: <FaFacebookF />, link: "#" },
@@ -110,7 +111,7 @@ function HomePage() {
       description:
         "Elevate your everyday spaces with masterfully crafted sofas and lounge pieces designed for ultimate comfort and striking aesthetics. Experience the perfect harmony of form, texture, and structural excellence.",
       btnText: "Explore Collection",
-      btnLink: "/",
+      btnLink: "/#Services",
     },
     {
       id: 2,
@@ -120,7 +121,7 @@ function HomePage() {
       description:
         "Transform your bedroom into a peaceful retreat. Our premium bed frames and minimalist storage solutions combine rich textures with clean architectural lines to build an oasis of deep, restorative calm.",
       btnText: "View Bedroom Sets",
-      btnLink: "/shop",
+      btnLink: "/#Services",
     },
     {
       id: 3,
@@ -130,7 +131,7 @@ function HomePage() {
       description:
         "Bring sophisticated design to the table. Whether hosting unforgettable dinners or crafting an inspiring home workspace, explore functional statement furniture built to endure and impress.",
       btnText: "Discover More",
-      btnLink: "/about",
+      btnLink: "/#Services",
     },
     {
       id: 4,
@@ -140,7 +141,7 @@ function HomePage() {
       description:
         "Bring sophisticated style to your dining room and home office. Explore beautifully crafted tables, ergonomic chairs, and sustainable storage solutions made to elevate your everyday routines.",
       btnText: "Shop New Arrivals",
-      btnLink: "/about",
+      btnLink: "/#Services",
     },
   ];
 
@@ -152,8 +153,10 @@ function HomePage() {
   ];
 
   const [statsRefreshKey, setStatsRefreshKey] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const refreshStats = () => setStatsRefreshKey((prev) => prev + 1);
     refreshStats();
     window.addEventListener("focus", refreshStats);
@@ -161,8 +164,7 @@ function HomePage() {
     return () => window.removeEventListener("focus", refreshStats);
   }, []);
 
-
-const [active, setActive] = useState(0);
+  const [active, setActive] = useState(0);
   const furnitureData = [
   {
     id: 1,
@@ -319,7 +321,7 @@ const filteredGallery =
         </div>
       </section>
 
-      <section className="ClientSec">
+      <section className="ClientSec" id="About">
         <Container fluid className="container-xl">
           <div className="ClientData">
             <div className="LeftClientItems">
@@ -331,12 +333,12 @@ const filteredGallery =
               </div>
               <p>Jakria Furniture brings you <strong>the finest sofas, almirahs & home furnishings</strong> at Gurdaspur's most trusted showroom. Quality that speaks. Craftsmanship that lasts.</p>
               <div className="ClientBtn">
-                <Link href="#">Explore Collections</Link>
+                <Link href="#Services">Explore Collections</Link>
                 <Link href="#">Visit Our Showroom</Link>
               </div>
             </div>
             <div className="RightClientItems">
-              <Image src="/Images/user1.avif" alt="user1.avif" width={700} height={400} />
+              <Image src="/Images/user2.JPEG" alt="user2.jpg" width={700} height={400} />
             </div>
           </div>
         </Container>
@@ -417,14 +419,18 @@ const filteredGallery =
                   <div key={index} className="stat-card">
                     <h3>
                       {item.icon && <FaStarHalfAlt size={28} className="me-2" />}
-                      <CountUp
-                        start={0}
-                        end={item.number}
-                        duration={2.5}
-                        decimals={item.decimals || 0}
-                        enableScrollSpy={true}
-                        scrollSpyOnce={true}
-                      />
+                          {mounted ? (
+                        <CountUp
+                          start={0}
+                          end={item.number}
+                          duration={2.5}
+                          decimals={item.decimals || 0}
+                          enableScrollSpy={true}
+                          scrollSpyOnce={true}
+                        />
+                      ) : (
+                        <span>{item.number}</span>
+                      )}
                       {item.suffix}
                     </h3>
                     <p>{item.label}</p>
@@ -464,7 +470,7 @@ const filteredGallery =
                 <div className="Cntlnk">
                   <Link href="tel:09814645550">981464-5550</Link>
                   <p>
-                    SCO 99, Tibri Road, Gurdaspur
+                    Tibri Road, Gurdaspur
                     <br />
                     Punjab 143521
                   </p>
@@ -480,75 +486,7 @@ const filteredGallery =
         </Container>
       </section>
 
-      <section className="SocialSec">
-        <Container fluid className="container-xl">
-          <div className="SocialLinkData">
-            <div className="top">
-              <div className="left">
-                <h2>Join Us On Social</h2>
-                <p>
-                  Tincidunt vitae semper quis lectus. Pretium vulputate sapien
-                  nec sagittis aliquam malesuada. Dignissim enim sit amet
-                  venenatis.Interdum velit laoreet id donec ultrices tincidunt
-                  arcu.
-                </p>
-                <Link href="">
-                  <IoShareSocialSharp /> Follow now
-                </Link>
-              </div>
-              <div className="Right">
-                <Link href="#">#Furniture</Link>
-                <Link href="#">#Decoration</Link>
-                <Link href="#">#Interior</Link>
-                <Link href="#">#Outdoor</Link>
-                <Link href="#">#Kitchen</Link>
-                <Link href="#">#Living room</Link>
-                <Link href="#">#Bars</Link>
-                <Link href="#">#Lounges</Link>
-                <Link href="#">#Hospitals</Link>
-              </div>
-            </div>
-            <div className="Bottom">
-              <Link href="#">
-                <div className="SoclImg">
-                  <Image src="/Images/social1.jpg" alt="social1.jpg" width={248} height={248} />
-                  <div className="IconDiv">
-                    <FaFacebook />
-                  </div>
-                </div>
-                <h6>@djkdkjd</h6>
-              </Link>
-              <Link href="#">
-                <div className="SoclImg">
-                  <Image src="/Images/social2.jpg" alt="social2.jpg" width={248} height={248} />
-                  <div className="IconDiv">
-                    <FaInstagramSquare />
-                  </div>
-                </div>
-                <h6>@djkdkjd</h6>
-              </Link>
-              <Link href="#">
-                <div className="SoclImg">
-                  <Image src="/Images/social2.jpg" alt="social2.jpg" width={248} height={248} />
-                  <div className="IconDiv">
-                    <FaWhatsapp />
-                  </div>
-                </div>
-                <h6>@djkdkjd</h6>
-              </Link>
-              <Link href="#">
-                <div className="SoclImg">
-                  <Image src="/Images/social2.jpg" alt="social2.jpg" width={248} height={248} />
-                  <div className="IconDiv">
-                    <FaLinkedin/>
-                  </div>
-                </div>
-                <h6>@djkdkjd</h6>
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <JoinedSocial/>
 
       <section className="HomeDecorSec">
         <Container fluid className="container-xl">
@@ -583,7 +521,7 @@ const filteredGallery =
         </Container>
       </section>
 
-      <section className="GallerySec">
+      <section className="GallerySec" id="Services">
         <Container fluid className="container-xl">
 
           <div className="GalleryData">
@@ -817,7 +755,7 @@ const filteredGallery =
         </Container>
       </section>
 
-      <section className="TeamsSec">
+      <section className="TeamsSec" id="#Team">
         <Container fluid className="container-xl">
           <div className="TeamsData">
             <div className="TeamHead">
@@ -874,14 +812,18 @@ const filteredGallery =
           {generationStats.map((item) => (
             <div className="GenCountItem" key={item.id}>
               <h4>
-                <CountUp
-                  key={`${item.id}-${statsRefreshKey}`}
-                  start={0}
-                  end={item.value}
-                  duration={2.5}
-                  enableScrollSpy={true}
-                  scrollSpyOnce={true}
-                />
+                {mounted ? (
+                  <CountUp
+                    key={`${item.id}-${statsRefreshKey}`}
+                    start={0}
+                    end={item.value}
+                    duration={2.5}
+                    enableScrollSpy={true}
+                    scrollSpyOnce={true}
+                  />
+                ) : (
+                  <span>{item.value}</span>
+                )}
                 {item.suffix}
               </h4>
               <p>{item.label}</p>
@@ -894,6 +836,78 @@ const filteredGallery =
 }
 
 export default HomePage;
+
+export function JoinedSocial() {
+  return <section className="SocialSec">
+    <Container fluid className="container-xl">
+      <div className="SocialLinkData">
+        <div className="top">
+          <div className="left">
+            <h2>Join Us On Social</h2>
+            <p>
+              Tincidunt vitae semper quis lectus. Pretium vulputate sapien
+              nec sagittis aliquam malesuada. Dignissim enim sit amet
+              venenatis.Interdum velit laoreet id donec ultrices tincidunt
+              arcu.
+            </p>
+            <Link href="">
+              <IoShareSocialSharp /> Follow now
+            </Link>
+          </div>
+          <div className="Right">
+            <Link href="#">#Furniture</Link>
+            <Link href="#">#Decoration</Link>
+            <Link href="#">#Interior</Link>
+            <Link href="#">#Outdoor</Link>
+            <Link href="#">#Kitchen</Link>
+            <Link href="#">#Living room</Link>
+            <Link href="#">#Bars</Link>
+            <Link href="#">#Lounges</Link>
+            <Link href="#">#Hospitals</Link>
+          </div>
+        </div>
+        <div className="Bottom">
+          <Link href="#">
+            <div className="SoclImg">
+              <Image src="/Images/social1.jpg" alt="social1.jpg" width={248} height={248} />
+              <div className="IconDiv">
+                <FaFacebook />
+              </div>
+            </div>
+            <h6>@djkdkjd</h6>
+          </Link>
+          <Link href="#">
+            <div className="SoclImg">
+              <Image src="/Images/social2.jpg" alt="social2.jpg" width={248} height={248} />
+              <div className="IconDiv">
+                <FaInstagramSquare />
+              </div>
+            </div>
+            <h6>@djkdkjd</h6>
+          </Link>
+          <Link href="#">
+            <div className="SoclImg">
+              <Image src="/Images/social2.jpg" alt="social2.jpg" width={248} height={248} />
+              <div className="IconDiv">
+                <FaWhatsapp />
+              </div>
+            </div>
+            <h6>@djkdkjd</h6>
+          </Link>
+          <Link href="#">
+            <div className="SoclImg">
+              <Image src="/Images/social2.jpg" alt="social2.jpg" width={248} height={248} />
+              <div className="IconDiv">
+                <FaLinkedin />
+              </div>
+            </div>
+            <h6>@djkdkjd</h6>
+          </Link>
+        </div>
+      </div>
+    </Container>
+  </section>;
+}
 
 export function ComnBtn({ href, text }) {
   return (

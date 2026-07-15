@@ -1,0 +1,102 @@
+.ContactFormSec{
+    background: url(/Images/body-bg.webp) !important;
+    background-color: #101010 !important;
+    min-height: 100vh;
+}
+.ContactFormSec .ContactData{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.ContactFormSec .ContactData :is(.ContLeft , .ContRight) img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    position: relative;
+}
+.ContactFormSec .ContactData :is(.ContLeft , .ContRight)::before{
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #101010;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+.ContactFormSec .ContactData .ContFormDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    height: 100%;
+    padding: 20px 40px;
+}
+.ContactFormSec .ContactData .ContFormDiv .contact-heading{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.ContactFormSec .ContactData .ContFormDiv .contact-heading h2{
+    color: var(--text-primary);
+    font-weight: 900;
+    font-size: 42px;
+}
+.ContactFormSec .ContactData .ContFormDiv .contact-heading p{
+    color: var(--text-secondary);
+    font-weight: 900;
+    font-size: 16px;
+}
+.ContactFormSec .ContactData .ContFormDiv form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ContactFormSec .ContactData .ContFormDiv form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ContactFormSec .ContactData .ContFormDiv form .formcontrol{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.ContactFormSec .ContactData .ContFormDiv form .formcontrol label{
+    color: var(--text-secondary);
+    font-size: 16px;
+    font-weight: 700;
+}
+.ContactFormSec .ContactData .ContFormDiv form .formcontrol :is(input , textarea) {
+    color: var(--black);
+    font-weight: 700;
+    font-size: 14px;
+    min-height: 48px;
+    padding: 8px 12px;
+    outline: none;
+    border-radius: 8px;
+}
+.ContactFormSec .ContactData .ContFormDiv form .FormBtn{
+    width: 100%;
+    margin-top: 35px;
+}
+.ContactFormSec .ContactData .ContFormDiv form .FormBtn button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    font-size: 18px;
+    font-weight: 700;
+    background: var(--button-secondary-hover);
+    box-shadow: none;
+    border: 1px solid var(--text-primary);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background: var(--button-primary-hover);
+        color: var(--text-primary);
+    }
+}

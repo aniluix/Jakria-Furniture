@@ -64,11 +64,11 @@ function Header() {
             <div className="top-contact">
 
               <span>
-                <FaEnvelope /> info@furniture.com
+                <FaEnvelope /> jakriabalwinder@gmail.com
               </span>
 
               <span>
-                <FaMapMarkerAlt /> New York
+                <FaMapMarkerAlt /> Gurdaspur
               </span>
 
             </div>
@@ -112,15 +112,15 @@ function Header() {
 
               <Nav className="mx-auto nav-menu">
 
-                <Nav.Link href="#">Home</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
 
-                <Nav.Link href="#">About</Nav.Link>
+                <Nav.Link href="/#About">About</Nav.Link>
 
-                <Nav.Link href="#">Services</Nav.Link>
+                <Nav.Link href="/#Services">Services</Nav.Link>
 
-                <Nav.Link href="#">Blog</Nav.Link>
+                <Nav.Link href="/#Team">Teams</Nav.Link>
 
-                <Nav.Link href="#">Contact</Nav.Link>
+                <Nav.Link target="_blank" href="/contact-us">Contact</Nav.Link>
 
               </Nav>
 
@@ -134,7 +134,7 @@ function Header() {
 
                   <small>Need Help?</small>
 
-                  <h6>+91 98765 43210</h6>
+                  <h6>+91 9814645550</h6>
 
                 </div>
 

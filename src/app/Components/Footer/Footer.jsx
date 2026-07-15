@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="Footer-Top">
             <div className="LftTopItem">
               <Link href="#" className="FtLogoDiv">
-                <div class="logo-mark">JF</div>
+                <div className="logo-mark">JF</div>
                 <div className="LogTexted">
                   <h6>
                     Jakria<span>Furniture</span>
@@ -36,16 +36,16 @@ const Footer = () => {
                 and workspace.
               </p>
               <div className="footer-social">
-                <Link href="#">
+                <Link target="-blank" href="https://www.facebook.com/JakriaAssociations/">
                   <FaFacebookF />
                 </Link>
-                <Link href="#">
+                <Link target="-blank" href="https://www.instagram.com/jakria_furniture_official/?hl=en">
                   <FaInstagram />
                 </Link>
-                <Link href="#">
+                <Link target="-blank" href="#">
                   <FaTwitter />
                 </Link>
-                <Link href="#">
+                <Link target="-blank" href="#">
                   <FaPinterestP />
                 </Link>
               </div>
@@ -54,11 +54,11 @@ const Footer = () => {
               <div className="FtQckLks">
                 <h4>Quick Links</h4>
                 <ul>
-                  <li><Link href="#">Home</Link></li>
-                  <li><Link href="#">About</Link></li>
-                  <li><Link href="#">Services</Link></li>
-                  <li><Link href="#">Blog</Link></li>
-                  <li><Link href="#">Contact</Link></li>
+                  <li><Link href="/">Home</Link></li>
+                  <li><Link href="/#About">About</Link></li>
+                  <li><Link href="/#Services">Services</Link></li>
+                  <li><Link href="/#Team">Teams</Link></li>
+                  <li><Link target="_blank" href="/contact-us">Contact</Link></li>
                 </ul>
               </div>
               <div className="FtQckLks">
@@ -75,14 +75,13 @@ const Footer = () => {
             <div className="EndTopItem">
               <h4>Contact Us</h4>
               <div className="footer-contact">
-                <p><FaMapMarkerAlt /> New York, United States</p>
-                <p><FaPhoneAlt /> <Link href="">+91 98765 43210</Link></p>
-                <p><FaEnvelope /><Link href="">info@furniture.com</Link></p>
+                <p><FaMapMarkerAlt /> Gurdaspur</p>
+                <p><FaPhoneAlt /> <Link target="-blank" href="tel:9814645550">+91 9814645550</Link></p>
+                <p><FaEnvelope /><Link target="-blank" href="mailto:jakriabalwinder@gmail.com">jakriabalwinder@gmail.com</Link></p>
               </div>
               <div className="newsletter">
                 <Form className="newsletter-form">
                   <Form.Control type="email" placeholder="Your Email" />
-
                   <Button>
                     <FaArrowRight />
                   </Button>
